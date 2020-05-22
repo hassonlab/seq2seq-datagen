@@ -8,21 +8,26 @@ exclude_words: words to be excluded from the tranformer vocabulary
 log_interval:
 '''
 
-CONFIG = {
-    "datum_suffix": ("conversation_trimmed", "trimmed"),
-    "electrodes": 64,
-    "log_interval": 32,
-    "main_dir": "/scratch/gpfs/hgazula/brain2en",
-    "data_dir": "/scratch/gpfs/hgazula",
-    "num_cpus": 8,
-    "print_pad": 120,
-    "train_convs": '-train-convs.txt',
-    "valid_convs": '-valid-convs.txt',
-}
+def return_config_dict():
+    CONFIG = {
+        "datum_suffix": ("conversation_trimmed", "trimmed"),
+        "electrodes": 64,
+        "log_interval": 32,
+        "main_dir": "/scratch/gpfs/hgazula/brain2en",
+        "data_dir": "/scratch/gpfs/hgazula",
+        "num_cpus": 8,
+        "print_pad": 120,
+        "train_convs": '-train-convs.txt',
+        "valid_convs": '-valid-convs.txt',
+    }
+
+    return CONFIG
 
 
 def build_config(args, results_str):
     # Format directory logistics
+    CONFIG = return_config_dict()
+
     CONV_DIRS = [
         CONFIG["data_dir"] + '/%s-conversations/' % i for i in args.subjects
     ]
