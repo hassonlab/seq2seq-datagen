@@ -2,13 +2,13 @@ import os
 
 from utils import read_file
 
-'''
-exclude_words_class: words to be excluded from the classifier vocabulary
-exclude_words: words to be excluded from the tranformer vocabulary
-log_interval:
-'''
 
 def return_config_dict():
+    '''
+    exclude_words_class: words to be excluded from the classifier vocabulary
+    exclude_words: words to be excluded from the tranformer vocabulary
+    log_interval:
+    '''
     CONFIG = {
         "datum_suffix": ("conversation_trimmed", "trimmed"),
         "electrodes": 64,
