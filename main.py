@@ -30,7 +30,7 @@ for subject_folder in CONFIG["CONV_DIRS"][1:]:
     print(f'Currently in: {subject_folder}')
 
     folder_split = subject_folder.split('/')
-    folder_split.insert(-2, 'npy_data')
+    folder_split.insert(-2, 'npy_data1')
     new_dir = '/'.join(folder_split)
 
     conv_list = glob.glob(os.path.join(subject_folder, 'NY*'))

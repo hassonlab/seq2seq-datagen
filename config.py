@@ -14,7 +14,7 @@ def return_config_dict():
         "electrodes": 64,
         "log_interval": 32,
         "main_dir": "/scratch/gpfs/hgazula/brain2en",
-        "data_dir": "/scratch/gpfs/hgazula",
+        "data_dir": "/scratch/gpfs/hgazula/brain2en-seq2seq-data",
         "num_cpus": 8,
         "print_pad": 120,
         "train_convs": '-train-convs.txt',
